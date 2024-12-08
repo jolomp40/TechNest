@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Site oficial de Julio Cesar, um programador especializado na criação de bots personalizados, tanto gratuitos quanto pagos.">
+    <meta name="description" content="Site oficial de Julio Cesar, programador especializado em criação de bots personalizados, gratuitos e pagos.">
     <title>Julio Cesar - Programador de Bots</title>
     <style>
+        /* Estilo para o corpo da página */
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: #121212;
@@ -14,11 +15,45 @@
             padding: 0;
             line-height: 1.8;
         }
-        header {
+
+        /* Barra de navegação */
+        nav {
             background-color: #1e1e1e;
-            padding: 40px;
+            padding: 15px 20px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: #ff6f00;
+            text-decoration: none;
+            font-size: 1.2em;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+        }
+        nav ul li a:hover {
+            color: #f0a500;
+        }
+
+        /* Estilo do cabeçalho */
+        header {
+            padding: 80px 20px 40px;
             text-align: center;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            margin-top: 50px;
         }
         header h1 {
             font-size: 3.5em;
@@ -27,8 +62,11 @@
             text-transform: uppercase;
             letter-spacing: 3px;
         }
+
+        /* Estilo das seções */
         section {
             padding: 50px 30px;
+            margin-top: 50px;
         }
         section h2 {
             font-size: 2.2em;
@@ -48,6 +86,8 @@
             line-height: 1.7;
             margin-bottom: 20px;
         }
+
+        /* Banner */
         .banner {
             text-align: center;
             margin: 40px 0;
@@ -58,6 +98,8 @@
             border-radius: 10px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
         }
+
+        /* Link para o Discord */
         .discord-link {
             text-align: center;
             margin-top: 30px;
@@ -76,6 +118,8 @@
             background-color: #5a6eb7;
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
         }
+
+        /* Rodapé */
         footer {
             background-color: #1e1e1e;
             padding: 30px;
@@ -87,36 +131,77 @@
             color: #bdbdbd;
             font-size: 1.1em;
         }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            section h2 {
+                font-size: 1.8em;
+            }
+        }
     </style>
 </head>
 <body>
+    <!-- Barra de Navegação -->
+    <nav>
+        <ul>
+            <li><a href="#sobre">Sobre Mim</a></li>
+            <li><a href="#habilidades">Minhas Habilidades</a></li>
+            <li><a href="#portfolio">Portfólio</a></li>
+            <li><a href="#discord">Discord</a></li>
+        </ul>
+    </nav>
+
+    <!-- Cabeçalho -->
     <header>
         <h1>Julio Cesar - Programador de Bots</h1>
     </header>
 
-    <section>
+    <!-- Seção Sobre Mim -->
+    <section id="sobre">
         <div class="content">
             <h2>Sobre Mim</h2>
             <p>Saudações! Sou Julio Cesar, um programador especializado na criação de bots personalizados para Discord e outras plataformas. Desenvolvo bots tanto gratuitos quanto pagos, atendendo às necessidades específicas dos meus clientes. Tenho grande paixão por otimizar processos e criar soluções inteligentes para automação e interação digital, oferecendo ferramentas que tornam a experiência do usuário mais dinâmica e envolvente.</p>
         </div>
     </section>
 
-    <section>
+    <!-- Seção Minhas Habilidades -->
+    <section id="habilidades">
         <div class="content">
             <h2>Minhas Habilidades</h2>
-            <p>Minha experiência abrange o desenvolvimento de bots para diferentes finalidades: desde simples automações até sistemas completos de gerenciamento e interação com usuários. Seja para tarefas diárias ou funções mais complexas, como gerenciamento de tickets, integração com APIs e análise de dados, estou sempre pronto para criar soluções sob medida, com opções tanto gratuitas quanto premium, dependendo das necessidades do cliente.</p>
+            <p>Minha experiência abrange o desenvolvimento de bots para diferentes finalidades: desde simples automações até sistemas completos de gerenciamento e interação com usuários. Sou especializado em programação de bots para Discord, automação de processos, integração de APIs e criação de sistemas inteligentes para otimização de tarefas.</p>
         </div>
     </section>
 
+    <!-- Seção Portfólio -->
+    <section id="portfolio">
+        <div class="content">
+            <h2>Portfólio</h2>
+            <p>Tenho um portfólio diversificado de bots criados para atender aos mais variados fins. Desde bots simples para moderação até sistemas robustos de gerenciamento de usuários e automações complexas. Confira alguns dos projetos que já desenvolvi:</p>
+            <ul>
+                <li>Bot de Gerenciamento de Tickets</li>
+                <li>Bot para Automação de Tarefas</li>
+                <li>Bots de Entretenimento e Diversão</li>
+                <li>Integração de Bots com APIs Externas</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Banner -->
     <section class="banner">
         <img src="https://media.discordapp.net/attachments/1305713956651929702/1313679407273218088/standard.gif?ex=6751ab89&is=67505a09&hm=da9b4c39c6e8d938f90f808ed276e4808ea0204b1e5dc5af1c01fe1c95b2fc25&" alt="Banner da Loja TechNest">
     </section>
 
-    <section class="discord-link">
+    <!-- Link para o Discord -->
+    <section id="discord" class="discord-link">
         <p>Junte-se ao meu servidor do Discord para mais informações, suporte e interação:</p>
         <a href="https://discord.gg/yNvhDPdN" target="_blank">Entrar no Discord</a>
     </section>
 
+    <!-- Rodapé -->
     <footer>
         <p>&copy; 2024 Julio Cesar - Todos os direitos reservados. Desenvolvimento e programação realizados por Julio Cesar.</p>
     </footer>
