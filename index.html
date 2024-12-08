@@ -65,8 +65,12 @@
 
         /* Estilo das seções */
         section {
+            display: none; /* Começa oculto */
             padding: 50px 30px;
             margin-top: 50px;
+        }
+        section.active {
+            display: block; /* Exibe a seção ativa */
         }
         section h2 {
             font-size: 2.2em;
@@ -148,10 +152,10 @@
     <!-- Barra de Navegação -->
     <nav>
         <ul>
-            <li><a href="#sobre">Sobre Mim</a></li>
-            <li><a href="#habilidades">Minhas Habilidades</a></li>
-            <li><a href="#portfolio">Portfólio</a></li>
-            <li><a href="#discord">Discord</a></li>
+            <li><a href="javascript:void(0)" onclick="showSection('sobre')">Sobre Mim</a></li>
+            <li><a href="javascript:void(0)" onclick="showSection('habilidades')">Minhas Habilidades</a></li>
+            <li><a href="javascript:void(0)" onclick="showSection('portfolio')">Portfólio</a></li>
+            <li><a href="javascript:void(0)" onclick="showSection('discord')">Discord</a></li>
         </ul>
     </nav>
 
@@ -161,33 +165,27 @@
     </header>
 
     <!-- Seção Sobre Mim -->
-    <section id="sobre">
-        <div class="content">
-            <h2>Sobre Mim</h2>
-            <p>Saudações! Sou Julio Cesar, um programador especializado na criação de bots personalizados para Discord e outras plataformas. Desenvolvo bots tanto gratuitos quanto pagos, atendendo às necessidades específicas dos meus clientes. Tenho grande paixão por otimizar processos e criar soluções inteligentes para automação e interação digital, oferecendo ferramentas que tornam a experiência do usuário mais dinâmica e envolvente.</p>
-        </div>
+    <section id="sobre" class="content">
+        <h2>Sobre Mim</h2>
+        <p>Saudações! Sou Julio Cesar, um programador especializado na criação de bots personalizados para Discord e outras plataformas. Desenvolvo bots tanto gratuitos quanto pagos, atendendo às necessidades específicas dos meus clientes. Tenho grande paixão por otimizar processos e criar soluções inteligentes para automação e interação digital, oferecendo ferramentas que tornam a experiência do usuário mais dinâmica e envolvente.</p>
     </section>
 
     <!-- Seção Minhas Habilidades -->
-    <section id="habilidades">
-        <div class="content">
-            <h2>Minhas Habilidades</h2>
-            <p>Minha experiência abrange o desenvolvimento de bots para diferentes finalidades: desde simples automações até sistemas completos de gerenciamento e interação com usuários. Sou especializado em programação de bots para Discord, automação de processos, integração de APIs e criação de sistemas inteligentes para otimização de tarefas.</p>
-        </div>
+    <section id="habilidades" class="content">
+        <h2>Minhas Habilidades</h2>
+        <p>Minha experiência abrange o desenvolvimento de bots para diferentes finalidades: desde simples automações até sistemas completos de gerenciamento e interação com usuários. Sou especializado em programação de bots para Discord, automação de processos, integração de APIs e criação de sistemas inteligentes para otimização de tarefas.</p>
     </section>
 
     <!-- Seção Portfólio -->
-    <section id="portfolio">
-        <div class="content">
-            <h2>Portfólio</h2>
-            <p>Tenho um portfólio diversificado de bots criados para atender aos mais variados fins. Desde bots simples para moderação até sistemas robustos de gerenciamento de usuários e automações complexas. Confira alguns dos projetos que já desenvolvi:</p>
-            <ul>
-                <li>Bot de Gerenciamento de Tickets</li>
-                <li>Bot para Automação de Tarefas</li>
-                <li>Bots de Entretenimento e Diversão</li>
-                <li>Integração de Bots com APIs Externas</li>
-            </ul>
-        </div>
+    <section id="portfolio" class="content">
+        <h2>Portfólio</h2>
+        <p>Tenho um portfólio diversificado de bots criados para atender aos mais variados fins. Desde bots simples para moderação até sistemas robustos de gerenciamento de usuários e automações complexas. Confira alguns dos projetos que já desenvolvi:</p>
+        <ul>
+            <li>Bot de Gerenciamento de Tickets</li>
+            <li>Bot para Automação de Tarefas</li>
+            <li>Bots de Entretenimento e Diversão</li>
+            <li>Integração de Bots com APIs Externas</li>
+        </ul>
     </section>
 
     <!-- Banner -->
@@ -205,5 +203,23 @@
     <footer>
         <p>&copy; 2024 Julio Cesar - Todos os direitos reservados. Desenvolvimento e programação realizados por Julio Cesar.</p>
     </footer>
+
+    <script>
+        // Função para mostrar a seção selecionada
+        function showSection(sectionId) {
+            // Ocultar todas as seções
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+            
+            // Mostrar a seção clicada
+            const selectedSection = document.getElementById(sectionId);
+            selectedSection.classList.add('active');
+        }
+
+        // Mostrar a seção "Sobre Mim" por padrão
+        showSection('sobre');
+    </script>
 </body>
 </html>
