@@ -4,19 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Site oficial de Julio Cesar, programador especializado em criação de bots personalizados, gratuitos e pagos.">
-    <title>Programador</title>
+    <title>Programador TechNest</title>
     <style>
-        /* Estilo para o corpo da página */
+        /* Estilo Geral */
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: #121212;
             color: #e0e0e0;
             margin: 0;
             padding: 0;
-            line-height: 1.8;
         }
 
-        /* Barra de navegação */
+        /* Barra de Navegação */
         nav {
             background-color: #1e1e1e;
             padding: 15px 20px;
@@ -27,7 +26,7 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
         }
         nav ul {
-            list-style-type: none;
+            list-style: none;
             margin: 0;
             padding: 0;
             display: flex;
@@ -41,86 +40,67 @@
             text-decoration: none;
             font-size: 1.2em;
             text-transform: uppercase;
-            letter-spacing: 1px;
-            transition: all 0.3s ease;
+            transition: color 0.3s;
         }
         nav ul li a:hover {
             color: #f0a500;
         }
 
-        /* Estilo do cabeçalho */
+        /* Cabeçalho */
         header {
-            padding: 80px 20px 40px;
             text-align: center;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-            margin-top: 50px;
+            padding: 100px 20px 50px;
+            background: linear-gradient(45deg, #ff6f00, #ff9800);
+            color: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
         }
         header h1 {
             font-size: 3.5em;
-            color: #ff6f00;
             margin: 0;
             text-transform: uppercase;
-            letter-spacing: 3px;
+            letter-spacing: 2px;
         }
 
-        /* Estilo das seções */
+        /* Estilo das Seções */
         section {
-            display: none; /* Começa oculto */
-            padding: 50px 30px;
-            margin-top: 50px;
+            display: none;
+            padding: 50px 20px;
+            max-width: 1200px;
+            margin: 50px auto;
         }
         section.active {
-            display: block; /* Exibe a seção ativa */
+            display: block;
         }
         section h2 {
             font-size: 2.2em;
             color: #ff6f00;
             margin-bottom: 20px;
             text-align: center;
-            text-transform: uppercase;
         }
-        .content {
-            max-width: 1200px;
-            margin: 0 auto;
-            text-align: justify;
-        }
-        .content p {
+        section p {
             font-size: 1.1em;
             color: #bdbdbd;
             line-height: 1.7;
             margin-bottom: 20px;
+            text-align: justify;
         }
 
-        /* Banner */
-        .banner {
+        /* Link do site */
+        .site-link {
             text-align: center;
-            margin: 40px 0;
+            margin-top: 20px;
         }
-        .banner img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-        }
-
-        /* Link para o Discord */
-        .discord-link {
-            text-align: center;
-            margin-top: 30px;
-        }
-        .discord-link a {
-            background-color: #7289da;
+        .site-link a {
+            background-color: #ff6f00;
             color: white;
             padding: 15px 30px;
             font-size: 1.3em;
             text-decoration: none;
             border-radius: 8px;
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-            transition: all 0.3s ease;
+            transition: background-color 0.3s ease;
         }
-        .discord-link a:hover {
-            background-color: #5a6eb7;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+        .site-link a:hover {
+            background-color: #f0a500;
         }
 
         /* Rodapé */
@@ -129,18 +109,14 @@
             padding: 30px;
             text-align: center;
             margin-top: 50px;
-            box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.2);
-        }
-        footer p {
             color: #bdbdbd;
-            font-size: 1.1em;
+            font-size: 1em;
         }
 
         /* Responsividade */
         @media (max-width: 768px) {
             nav ul {
                 flex-direction: column;
-                align-items: center;
             }
             section h2 {
                 font-size: 1.8em;
@@ -155,71 +131,59 @@
             <li><a href="javascript:void(0)" onclick="showSection('sobre')">Sobre Mim</a></li>
             <li><a href="javascript:void(0)" onclick="showSection('habilidades')">Minhas Habilidades</a></li>
             <li><a href="javascript:void(0)" onclick="showSection('portfolio')">Portfólio</a></li>
-            <li><a href="javascript:void(0)" onclick="showSection('discord')">Discord</a></li>
+            <li><a href="javascript:void(0)" onclick="showSection('decoracoes')">Decorações</a></li>
         </ul>
     </nav>
 
     <!-- Cabeçalho -->
     <header>
-        <h1>Programador</h1>
+        <h1>Programador TechNest</h1>
     </header>
 
     <!-- Seção Sobre Mim -->
-    <section id="sobre" class="content">
+    <section id="sobre" class="active">
         <h2>Sobre Mim</h2>
-        <p>Olá! Sou um programador apaixonado por criar bots e automações que resolvem problemas reais. Trabalho com bots personalizados tanto gratuitos quanto pagos, buscando sempre a melhor solução para cada necessidade. Minha missão é tornar a experiência digital mais interativa, eficiente e divertida, criando sistemas que ajudam as pessoas no seu dia a dia e facilitam processos no mundo virtual.</p>
+        <p>Sou Julio Cesar, programador especializado em bots para Discord. Meu foco é desenvolver soluções personalizadas e profissionais para atender às suas necessidades, desde gerenciamento de tickets até automações avançadas.</p>
     </section>
 
     <!-- Seção Minhas Habilidades -->
-    <section id="habilidades" class="content">
+    <section id="habilidades">
         <h2>Minhas Habilidades</h2>
-        <p>Tenho uma vasta experiência no desenvolvimento de bots que atendem às mais variadas finalidades. Desde automações simples, como respostas automáticas, até sistemas completos de interação com usuários, passando pela integração de APIs e a criação de soluções inteligentes para otimização de tarefas. Meu foco está sempre em entregar soluções práticas e eficientes que tornem o uso da tecnologia mais acessível e funcional para todos.</p>
+        <p>Desenvolvimento de bots eficientes, integração com APIs, sistemas de tickets profissionais, automações e muito mais. Ofereço soluções tanto gratuitas quanto personalizadas para você.</p>
     </section>
 
     <!-- Seção Portfólio -->
-    <section id="portfolio" class="content">
+    <section id="portfolio">
         <h2>Portfólio</h2>
-        <p>Com uma experiência ampla no desenvolvimento de bots, aqui estão alguns dos projetos que já realizei:</p>
+        <p>Confira alguns dos projetos que desenvolvi:</p>
         <ul>
-            <li>Bot de Gerenciamento de Tickets</li>
-            <li>Bot para Automação de Tarefas Repetitivas</li>
-            <li>Bot de Entretenimento para Discord</li>
-            <li>Integração com APIs Externas</li>
+            <li>Bot de gerenciamento de tickets 100% profissional</li>
+            <li>Automação de mensagens</li>
+            <li>Sistemas integrados com APIs externas</li>
+            <li>Bots de entretenimento para comunidades</li>
         </ul>
     </section>
 
-    <!-- Banner -->
-    <section class="banner">
-        <img src="https://media.discordapp.net/attachments/1305713956651929702/1313679407273218088/standard.gif?ex=6751ab89&is=67505a09&hm=da9b4c39c6e8d938f90f808ed276e4808ea0204b1e5dc5af1c01fe1c95b2fc25&" alt="Banner da Loja TechNest">
-    </section>
-
-    <!-- Link para o Discord -->
-    <section id="discord" class="discord-link">
-        <p>Se você tem interesse em mais informações ou quiser conversar diretamente, entre no meu servidor do Discord:</p>
-        <a href="https://discord.gg/yNvhDPdN" target="_blank">Entrar no Discord</a>
+    <!-- Seção Decorações -->
+    <section id="decoracoes">
+        <h2>Decorações para Discord</h2>
+        <p>Transforme seu perfil com decorações incríveis e gratuitas! esse site oferece uma ampla variedade de Decorações e personalizações para tornar o seu Discord único e atrativo. Não perca a oportunidade de acessar conteúdos exclusivos e totalmente gratuitos.</p>
+        <div class="site-link">
+            <a href="https://discord-decorations.vercel.app/" target="_blank">Acesse o site de Decorações</a>
+        </div>
     </section>
 
     <!-- Rodapé -->
     <footer>
-        <p>&copy; 2024 Programador - Todos os direitos reservados. Desenvolvimento e programação realizados por Julio Cesar.</p>
+        <p>&copy; 2024 Julio Cesar - Todos os direitos reservados.</p>
     </footer>
 
     <script>
-        // Função para mostrar a seção selecionada
         function showSection(sectionId) {
-            // Ocultar todas as seções
             const sections = document.querySelectorAll('section');
-            sections.forEach(section => {
-                section.classList.remove('active');
-            });
-            
-            // Mostrar a seção clicada
-            const selectedSection = document.getElementById(sectionId);
-            selectedSection.classList.add('active');
+            sections.forEach(section => section.classList.remove('active'));
+            document.getElementById(sectionId).classList.add('active');
         }
-
-        // Mostrar a seção "Sobre Mim" por padrão
-        showSection('sobre');
     </script>
 </body>
-</html>
+</html>Programador TechNest.com
